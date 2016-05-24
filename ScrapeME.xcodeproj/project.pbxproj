@@ -3,14 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C549059BE53EBF08671F8C5 /* Pods_ScrapeME.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38E655AC78CEB1EE58A53AB /* Pods_ScrapeME.framework */; };
 		C15009931CF3CDAC00A3F5E6 /* domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15009921CF3CDAC00A3F5E6 /* domain.swift */; };
+		C16503071CF3F75F00A06C63 /* Fuzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C16503061CF3F75F00A06C63 /* Fuzi.framework */; };
 		C1DC32F81CF3BD24004B2A5F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC32F71CF3BD24004B2A5F /* main.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		C17E431F1CF49F0E0073A5A0 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = text.plist.strings;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# builtin-copyStrings\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C1DC32F21CF3BD24004B2A5F /* CopyFiles */ = {
@@ -25,12 +37,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9FF6546DBD8CA2D6E7355079 /* Pods-ScrapeME.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrapeME.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrapeME/Pods-ScrapeME.debug.xcconfig"; sourceTree = "<group>"; };
-		A38E655AC78CEB1EE58A53AB /* Pods_ScrapeME.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrapeME.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15009921CF3CDAC00A3F5E6 /* domain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = domain.swift; sourceTree = "<group>"; };
+		C16503061CF3F75F00A06C63 /* Fuzi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fuzi.framework; path = Carthage/Build/Mac/Fuzi.framework; sourceTree = "<group>"; };
 		C1DC32F41CF3BD24004B2A5F /* ScrapeME */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ScrapeME; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1DC32F71CF3BD24004B2A5F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		EFE9EFD2A7AA043D01E1F2D9 /* Pods-ScrapeME.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrapeME.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrapeME/Pods-ScrapeME.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,28 +48,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C549059BE53EBF08671F8C5 /* Pods_ScrapeME.framework in Frameworks */,
+				C16503071CF3F75F00A06C63 /* Fuzi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C2682F6DF0983080B5F343B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A38E655AC78CEB1EE58A53AB /* Pods_ScrapeME.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		C1DC32EB1CF3BD24004B2A5F = {
 			isa = PBXGroup;
 			children = (
+				C16503061CF3F75F00A06C63 /* Fuzi.framework */,
 				C1DC32F61CF3BD24004B2A5F /* ScrapeME */,
 				C1DC32F51CF3BD24004B2A5F /* Products */,
-				E42FEEAB4567804EA914C9CF /* Pods */,
-				0C2682F6DF0983080B5F343B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,15 +81,6 @@
 			path = ScrapeME;
 			sourceTree = "<group>";
 		};
-		E42FEEAB4567804EA914C9CF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9FF6546DBD8CA2D6E7355079 /* Pods-ScrapeME.debug.xcconfig */,
-				EFE9EFD2A7AA043D01E1F2D9 /* Pods-ScrapeME.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,13 +88,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1DC32FB1CF3BD24004B2A5F /* Build configuration list for PBXNativeTarget "ScrapeME" */;
 			buildPhases = (
-				7AAF10F22CF2AF72B11BD289 /* 📦 Check Pods Manifest.lock */,
 				C1DC32F01CF3BD24004B2A5F /* Sources */,
 				C1DC32F11CF3BD24004B2A5F /* Frameworks */,
 				C1DC32F21CF3BD24004B2A5F /* CopyFiles */,
-				369B57981511C582CF5B5B14 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
+				C17E431F1CF49F0E0073A5A0 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -127,7 +118,7 @@
 				};
 			};
 			buildConfigurationList = C1DC32EF1CF3BD24004B2A5F /* Build configuration list for PBXProject "ScrapeME" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -142,39 +133,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		369B57981511C582CF5B5B14 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrapeME/Pods-ScrapeME-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7AAF10F22CF2AF72B11BD289 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C1DC32F01CF3BD24004B2A5F /* Sources */ = {
@@ -210,8 +168,11 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
+				FRAMEWORK_SEARCH_PATHS = "@executable_path/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -226,11 +187,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks @executable_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Debug;
 		};
@@ -255,8 +217,12 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				FRAMEWORK_SEARCH_PATHS = "@executable_path/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -265,6 +231,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks @executable_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -273,17 +240,47 @@
 		};
 		C1DC32FC1CF3BD24004B2A5F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FF6546DBD8CA2D6E7355079 /* Pods-ScrapeME.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				ENABLE_ON_DEMAND_RESOURCES = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				LD_RUNPATH_SEARCH_PATHS = /Library/Developer/CommandLineTools/usr/lib/swift/macosx/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+					"$(SDKROOT)/usr/lib/system/introspection",
+					"$(SDKROOT)/usr/lib/dtrace",
+					"$(SDKROOT)/usr/lib/python2.6/config",
+					"$(SDKROOT)/usr/lib/python2.7/config",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REEXPORTED_LIBRARY_PATHS = "";
 			};
 			name = Debug;
 		};
 		C1DC32FD1CF3BD24004B2A5F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFE9EFD2A7AA043D01E1F2D9 /* Pods-ScrapeME.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				ENABLE_ON_DEMAND_RESOURCES = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				LD_RUNPATH_SEARCH_PATHS = /Library/Developer/CommandLineTools/usr/lib/swift/macosx/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+					"$(SDKROOT)/usr/lib/system/introspection",
+					"$(SDKROOT)/usr/lib/dtrace",
+					"$(SDKROOT)/usr/lib/python2.6/config",
+					"$(SDKROOT)/usr/lib/python2.7/config",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REEXPORTED_LIBRARY_PATHS = "";
 			};
 			name = Release;
 		};

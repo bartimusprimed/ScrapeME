@@ -9,4 +9,4 @@ import Foundation
 
 let website = Domain(domain: Process.arguments[1])
 print(website.domain)
-website.connectToDomain()
+website.connectToDomain(nil)
