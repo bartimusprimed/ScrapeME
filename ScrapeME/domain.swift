@@ -71,8 +71,8 @@ class Domain {
                     allPagesHTML.append(connectToDomain(link["href"]))
                 }
             }
-        } catch let error {
-            print(error)
+        } catch {
+            print("For some strange reason the page that was grabbed is not in a valid html format")
         }
         return allPagesHTML
     }
