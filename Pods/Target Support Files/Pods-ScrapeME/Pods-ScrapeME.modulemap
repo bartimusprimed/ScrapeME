@@ -1,0 +1,6 @@
+framework module Pods_ScrapeME {
+  umbrella header "Pods-ScrapeME-umbrella.h"
+
+  export *
+  module * { export * }
+}

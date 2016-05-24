@@ -31,8 +31,12 @@ class Domain {
     }
     
     func grabSitePages(html: String) {
-        let result = html.containsString("href")
+        let result = self.searchForString(HTMLDocument(html), searchString: "href")
         print(result)
+    }
+    
+    func searchForString(pulledHtml: HTMLDocument, searchString: String) -> [String] {
+        
     }
     
 }
