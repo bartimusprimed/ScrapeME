@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ScrapeME.xcodeproj">
+      location = "self:ScrapeMESwiftly.xcodeproj">
    </FileRef>
 </Workspace>
